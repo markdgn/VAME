@@ -1,0 +1,28 @@
+<Window x:Class="VAME.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="VAME - VSRO Advanced Map Editor" Height="720" Width="1280">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="300" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Canvas: Harita Alanı -->
+        <ScrollViewer Grid.Column="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <Canvas Name="MapCanvas" Background="Black" MouseLeftButtonDown="MapCanvas_MouseLeftButtonDown" />
+        </ScrollViewer>
+
+        <!-- Sağ Panel -->
+        <StackPanel Grid.Column="1" Background="#1E1E1E" Foreground="White" Padding="10">
+            <TextBlock Text="Region Bilgisi" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBlock Name="RegionInfoText" Text="Seçili koordinat yok." Margin="0,0,0,20"/>
+
+            <CheckBox Name="NavMeshToggle" Content="Show NavMesh" Checked="NavMeshToggle_Checked" Unchecked="NavMeshToggle_Unchecked" Margin="0,0,0,20"/>
+            
+            <Button Content="Load O2 + NVM" Click="LoadMapButton_Click" Margin="0,0,0,10"/>
+            <Button Content="Add Object" Click="AddObjectButton_Click" Margin="0,0,0,10"/>
+            <Button Content="Clear" Click="ClearMapButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
