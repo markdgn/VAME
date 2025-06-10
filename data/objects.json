@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "RED_TEAM_BASE",
+    "type": "spawn",
+    "region_id": 57963,
+    "x": 43492,
+    "y": 20524,
+    "z": 0
+  },
+  {
+    "id": 2,
+    "name": "BLUE_TEAM_BASE",
+    "type": "spawn",
+    "region_id": 57959,
+    "x": 43492,
+    "y": 19748,
+    "z": 0
+  }
+]
